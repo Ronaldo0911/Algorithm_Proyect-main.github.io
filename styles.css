@@ -1,0 +1,149 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+  background-image: url('./Grafos.jpg');
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+
+#map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#mapa {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; /* Permite interacciones en el mapa */
+}
+
+
+.nav {
+  width: 300px;
+}
+
+.nav__link{
+  color: #303440;
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+}
+
+.nav__link--inside{
+  border-radius: 6px;
+  padding-left: 20px;
+  text-align: left;
+}
+.nav__link--inside2{
+  border-radius: 6px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.nav__link--inside:hover{
+  background: #70757b;
+
+}
+
+
+.list{
+  width: 600;
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #95ecec;
+  border-radius: 10px;
+  border: 5px solid #500ac0;  
+}
+
+.list__item{
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  overflow:hidden;
+}
+
+.list__item--click{
+  cursor: pointer;
+}
+
+.list__button{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.arrow .list__arrow{
+  transform: rotate(90deg);
+}
+
+.list__arrow{
+  margin-left: auto;
+  transition: transform .3s;
+}
+
+.list_show{
+  width: 80%;
+  margin-left: auto;
+  border-left: 2px solid #303440;
+  list-style: none;
+  transition: height .4s;
+  height: 0;
+}
+
+
+.inputs-container {
+  display:contents;
+  gap: 5px; 
+  align-items: center; 
+}
+
+
+.styled-input {
+  width: 90px; 
+  height: 25px; 
+  padding: 2px 10px; 
+  font-size: 12px; 
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none; 
+  transition: border-color 0.3s ease; /
+}
+
+/* Cambiar estilo al enfocar el input */
+.styled-input:focus {
+  border-color: #007BFF; /* Color del borde al enfocar */
+}
+
+
+

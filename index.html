@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Grafos</title>
+    <link rel="icon" href="img/Icono.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <h1 class="centered-heading">Grafos</h1>
+    <div class="container">
+
+        <nav class="nav">
+            <ul class="list">
+
+                <!-- Sección Nodos (sin cambios) -->
+                <li class="list__item list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="img/node.svg" class="list__img">
+                        <a href="#" class="nav__link">Nodos</a>
+                        <img src="img/flecha.svg" class="list__arrow">
+                    </div>
+                    <ul class="list_show">
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside Borrar">Borrar</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside Agregar">Agregar</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside Save">Save</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside Open">Open</a>
+                        </li>
+
+                    </ul>
+                </li><br>
+
+                <!-- Sección Aristas (sin cambios) -->
+                <li class="list__item list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="img/edege.svg" class="list__img">
+                        <a href="#" class="nav__link">Aristas</a>
+                        <img src="img/flecha.svg" class="list__arrow">
+                    </div>
+                    <ul class="list_show">
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside AgregarArista">Agregar</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside EliminarArista">Eliminar</a>
+                        </li>
+                    </ul>
+                </li><br>
+
+                <!-- Sección Algoritmos (actualizada) -->
+                <li class="list__item list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="img/tareas.svg" class="list__img">
+                        <a href="#" class="nav__link">Algoritmos</a>
+                        <img src="img/flecha.svg" class="list__arrow">
+                    </div>
+                    <ul class="list_show">
+                        <!-- Inputs para elegir nodo inicial y objetivo -->
+                        <li class="list__inside inputs-container">
+                            <input type="number" id="nodeStart" class="styled-input" placeholder="Inicio">
+                            <input type="number" id="nodeObjet" class="styled-input" placeholder="Objetivo">
+                        </li>
+
+
+                        <!-- Algoritmos -->
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside BFS">Breadth First Search</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside DFS">Depth First Search</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside IDS">Iterative Deepening Search</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside BFS_H">Heurístico Best First Search</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside ASS">A star search</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside IDA_SS">Iterative Deepening A* Search</a>
+                        </li>
+                    </ul>
+                </li><br>
+
+
+            </ul>
+        </nav>
+
+        <div id="map-container">
+            <div id="mapa" style="width: 1000px; height: 600px;"></div>
+            <canvas id="canvas" width="1055" height="600"></canvas>
+        </div>
+
+          
+        
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
